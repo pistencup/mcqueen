@@ -12,10 +12,10 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class CloudContext {
-    static final String HEADER_NAME_REQUEST_ID = "pc-request-id";
-    static final String HEADER_NAME_PREVIOUS_SPAN_ID = "pc-previous-span-id";
+    static final String HEADER_NAME_REQUEST_ID = "pc-req-id";
+    static final String HEADER_NAME_PREVIOUS_SPAN_ID = "pc-prev-span-id";
     static final String HEADER_NAME_CALL_INDEX = "pc-call-index";
-    static final String HEADER_NAME_VERSION_NAME = "pc-version-name";
+    static final String HEADER_NAME_VERSION_NAME = "pc-ver-name";
 
     private final AtomicInteger callOutCount = new AtomicInteger(0);
     /**
