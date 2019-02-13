@@ -12,12 +12,12 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class CloudContext {
-    static final String HEADER_NAME_REQUEST_ID = "RequestID";
-    static final String HEADER_NAME_PREVIOUS_SPAN_ID = "SourceSpanID";
-    static final String HEADER_NAME_CALL_INDEX = "CallIndex";
-    static final String HEADER_NAME_VERSION_NAME = "VersionName";
+    static final String HEADER_NAME_REQUEST_ID = "pc-request-id";
+    static final String HEADER_NAME_PREVIOUS_SPAN_ID = "pc-previous-span-id";
+    static final String HEADER_NAME_CALL_INDEX = "pc-call-index";
+    static final String HEADER_NAME_VERSION_NAME = "pc-version-name";
 
-    private AtomicInteger callOutCount = new AtomicInteger(0);
+    private final AtomicInteger callOutCount = new AtomicInteger(0);
     /**
      * Get the integer "CallIndex" value in the header of the next remote call
      */
