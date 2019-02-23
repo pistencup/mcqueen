@@ -15,7 +15,7 @@ public class CloudContext {
     static final String HEADER_NAME_REQUEST_ID = "pc-req-id";
     static final String HEADER_NAME_PREVIOUS_SPAN_ID = "pc-prev-span-id";
     static final String HEADER_NAME_CALL_INDEX = "pc-call-index";
-    static final String HEADER_NAME_VERSION_NAME = "pc-ver-name";
+    static final String HEADER_NAME_GROUP_NAME = "pc-gp-name";
 
     private final AtomicInteger callOutCount = new AtomicInteger(0);
     /**
@@ -32,7 +32,7 @@ public class CloudContext {
     @Getter
     private final String spanID;
     @Getter
-    private final String versionName;
+    private final String groupName;
     /**
      * The "CallIndex" value of current span
      */
@@ -58,8 +58,8 @@ public class CloudContext {
         String previousSpanIDInHeader = request.getHeader(HEADER_NAME_PREVIOUS_SPAN_ID);
         previousSpanID = StringUtils.isEmpty(previousSpanIDInHeader) ? "" : previousSpanIDInHeader;
 
-        String versionNameInHeader = request.getHeader(HEADER_NAME_VERSION_NAME);
-        versionName = StringUtils.isEmpty(versionNameInHeader) ? "" : versionNameInHeader;
+        String groupNameInHeader = request.getHeader(HEADER_NAME_GROUP_NAME);
+        groupName = StringUtils.isEmpty(groupNameInHeader) ? "" : groupNameInHeader;
 
         String callIndexInHeader = request.getHeader(HEADER_NAME_CALL_INDEX);
         callIndex = StringUtils.isEmpty(callIndexInHeader) ? "1" : callIndexInHeader;

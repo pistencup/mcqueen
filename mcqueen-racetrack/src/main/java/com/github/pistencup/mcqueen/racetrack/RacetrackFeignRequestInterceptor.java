@@ -13,7 +13,7 @@ public class RacetrackFeignRequestInterceptor implements RequestInterceptor {
             requestTemplate.header(CloudContext.HEADER_NAME_CALL_INDEX, cloudContext.makeNextCallIndex().toString());
             requestTemplate.header(CloudContext.HEADER_NAME_PREVIOUS_SPAN_ID, cloudContext.getSpanID());
             requestTemplate.header(CloudContext.HEADER_NAME_REQUEST_ID, cloudContext.getRequestID());
-            requestTemplate.header(CloudContext.HEADER_NAME_VERSION_NAME, cloudContext.getVersionName());
+            requestTemplate.header(CloudContext.HEADER_NAME_GROUP_NAME, cloudContext.getGroupName());
         }
 
     }
