@@ -28,8 +28,6 @@ public class SampleController {
         list.add(JSON.toJSONString("abc"));
         list.add(JSON.toJSONString(endpoint));
 
-
-
         return JSON.toJSONString(list);
     }
 

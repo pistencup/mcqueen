@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import(RacetrackRegistrar.class)
+@Import(RacetrackConfig.class)
 public @interface EnableMcqueenRacetrack {
 
 }
