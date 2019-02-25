@@ -76,8 +76,8 @@ mcqueen:
 1. `@EnableMcqueenRacetrack`注解  
 启用racetrack包的能力, 在所有请求中增加`CloudContext`, 同一外部请求处理过程中, 
 所有处理节点可以获得一个一致的标识并对节点自身也进行标识, 进而获得完整的处理链条,
-或者在多个处理过程间共享数据. racetrack包工作方式如下:
-![racetrack_flow.png](https://github.com/pistencup/introduction/blob/master/racetrack_flow.png?raw=true)
+或者在多个处理过程间共享数据. racetrack包工作方式如下:  
+![racetrack_flow.png](https://github.com/pistencup/introduction/blob/master/racetrack_flow.png?raw=true)  
 
 2. `@EnableMcqueenCamera`注解  
 启用camera包的请求记录能力, 将处理链和每个处理节点的参数和处理结果记录到指定的输出中.  
