@@ -1,3 +1,13 @@
-pistencup:
+mcqueen:
+  racetrack:
+    enable-request-wrapper: true
   camera:
-
+    max-body-log-length: 2147483647 #Integer.MAX_VALUE
+    max-param-key-length: 2147483647 #Integer.MAX_VALUE
+    max-param-value-length: 2147483647 #Integer.MAX_VALUE
+    max-param-count: 2147483647 #Integer.MAX_VALUE
+    #kafka:
+      #topic: pistencup-camera
+      #batch-size: 1000
+      #linger: 0
+      #bootstrap-servers: localhost:9091

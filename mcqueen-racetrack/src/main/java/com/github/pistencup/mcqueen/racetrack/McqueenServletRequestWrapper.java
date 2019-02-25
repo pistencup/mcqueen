@@ -1,4 +1,4 @@
-package com.github.pistencup.mcqueen.camera;
+package com.github.pistencup.mcqueen.racetrack;
 
 import org.springframework.util.StreamUtils;
 

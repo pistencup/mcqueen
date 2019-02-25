@@ -1,4 +1,4 @@
-package com.github.pistencup.mcqueen.camera;
+package com.github.pistencup.mcqueen.racetrack;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 
@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@ConditionalOnProperty(value = "mcqueen.camera.enable-request-wrapper", matchIfMissing = true)
+@ConditionalOnProperty(value = "mcqueen.racetrack.enable-request-wrapper", matchIfMissing = true)
 @WebFilter
 public class McqueenRequestFilter implements Filter {
     @Override

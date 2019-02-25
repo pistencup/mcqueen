@@ -11,7 +11,6 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.util.ClassUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
@@ -97,7 +96,7 @@ public class CameraAspect {
         dataSaver.saveData(record);
     }
 
-    public static void addBasePackages(Collection<String> pkgs){
+    static void addBasePackages(Collection<String> pkgs){
         CameraAspect.basePackages.addAll(pkgs);
     }
 }

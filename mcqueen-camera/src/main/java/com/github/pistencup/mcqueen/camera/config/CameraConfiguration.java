@@ -6,11 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "pistencup.camera")
+@ConfigurationProperties(prefix = "mcqueen.camera")
 public class CameraConfiguration {
 
-    @Getter @Setter
-    private Boolean enableRequestWrapper = true;
     @Getter @Setter
     private Integer maxBodyLogLength = Integer.MAX_VALUE;
     @Getter @Setter

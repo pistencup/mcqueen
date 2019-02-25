@@ -19,9 +19,13 @@ public class SampleController {
     @Autowired
     private EndpointDescriptor endpoint;
 
+    @Autowired
+    private CloudContext cloudContext;
+
     @GetMapping("/sa")
     public String sampleAction(){
         ArrayList<String> list = new ArrayList<>();
+        list.add(JSON.toJSONString(cloudContext));
         list.add(JSON.toJSONString(CloudContext.getCurrent()));
         list.add(client.sa());
         list.add(client.sa());

@@ -21,8 +21,7 @@ import org.springframework.kafka.annotation.EnableKafka;
 @EnableKafka
 @EnableConfigurationProperties(CameraConfiguration.class)
 @Import({
-        CameraAspect.class,
-        McqueenRequestFilter.class
+        CameraAspect.class
 })
 public class CameraConfig {
 

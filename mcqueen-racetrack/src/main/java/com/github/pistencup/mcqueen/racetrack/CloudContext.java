@@ -41,10 +41,10 @@ public class CloudContext {
 
     /**
      * DO NOT create CloudContext object from constructor
-     * Use CloudContext.getCurrent
+     * Use CloudContext.getCurrent or get object from IOC container
      * @param request HttpServletRequest in current context
      */
-    private CloudContext(@NonNull HttpServletRequest request){
+    public CloudContext(@NonNull HttpServletRequest request){
 
         String requestIDInHeader = request.getHeader(HEADER_NAME_REQUEST_ID);
         if (StringUtils.isEmpty(requestIDInHeader)){
