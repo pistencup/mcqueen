@@ -1,5 +1,5 @@
 # mcqueen
-mcqueen[pistencup](https://github.com/pistencup/introduction)工具包的Java部分, 关于pistencup工具包请参考：[pistencup](https://github.com/pistencup/introduction).
+mcqueen是[pistencup](https://github.com/pistencup/introduction)工具包的Java部分, 关于pistencup工具包请参考：[pistencup](https://github.com/pistencup/introduction).
 
 # 其他语言支持
 如果你在寻找其他语言支持, 请参考: [已提供的支持](https://github.com/pistencup/introduction#%E5%B7%B2%E6%8F%90%E4%BE%9B%E7%9A%84%E6%94%AF%E6%8C%81)
