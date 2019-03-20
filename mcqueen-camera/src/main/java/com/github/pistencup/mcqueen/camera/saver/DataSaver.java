@@ -14,7 +14,7 @@ public class DataSaver implements Runnable, ApplicationListener<ContextClosedEve
 
     private final LinkedBlockingQueue<ActionRecord> queue = new LinkedBlockingQueue<>();
     private final DataWriter dataWriter;
-    private Boolean shutdown = false;
+    private volatile boolean shutdown = false;
     private Thread workerThread;
 
     public DataSaver(DataWriter dataWriter){
@@ -32,7 +32,7 @@ public class DataSaver implements Runnable, ApplicationListener<ContextClosedEve
         workerThread.start();
     }
 
-    private synchronized void shutdown(){
+    private void shutdown(){
         if (!shutdown) {
             shutdown = true;
             workerThread.interrupt();

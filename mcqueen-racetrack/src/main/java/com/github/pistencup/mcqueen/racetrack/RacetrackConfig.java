@@ -1,9 +1,12 @@
 package com.github.pistencup.mcqueen.racetrack;
 
+import com.github.pistencup.mcqueen.racetrack.config.RacetrackConfiguration;
 import feign.RequestInterceptor;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 
 @Configuration
+@EnableConfigurationProperties(RacetrackConfiguration.class)
 @Import(McqueenRequestFilter.class)
 public class RacetrackConfig {
 

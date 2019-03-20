@@ -7,7 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 @SpringBootApplication
@@ -23,11 +22,16 @@ public class SampleServerBApplication {
     //Logger logger = LoggerFactory.getLogger("serverb");
 
     @RequestMapping("/sa")
-    public String sampleAction(String a, HttpServletResponse response){
+    public String sampleAction(String arg, HttpServletResponse response){
         //logger.warn(JSON.toJSONString(CloudContext.getCurrent()));
         //response.addCookie(new Cookie("aaa", "bbb"));
 
-        return "i am server-b";
+        ClassLoader cl;
+
+        Integer a = 1;
+        Integer b =1;
+
+        return String.valueOf(a.equals(b));
     }
 }
 
